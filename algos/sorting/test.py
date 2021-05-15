@@ -2,6 +2,7 @@ from bubble_sort import BubbleSort
 from insert_sort import InsertSort
 from selection_sort import SelectionSort
 from merge_sort import MergeSort
+from count_sort import CountSort
 import numpy as np
 
 
@@ -47,8 +48,22 @@ def run_merge_sort():
     print()
 
 
+def run_count_sort():
+    ll = [9,9,9,9,9,5,5,5,5,5,1,1,1]
+    print(ll)
+    _is = CountSort(ll)
+    res = _is.sort()
+    print("CountSort")
+    print
+    print(f"before: {ll}")
+    print(f"after: {res}")
+    print()
+
+
+
 if __name__ == "__main__":
     # run_bubble_sort()
     # run_selection_sort()
     # run_insert_sort()
-    run_merge_sort()
+    # run_merge_sort()
+    run_count_sort()
