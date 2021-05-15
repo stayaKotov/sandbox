@@ -12,16 +12,17 @@ class MergeSort:
     def _merge(self, left, right):
         result_arr = []
         it1, it2 = 0, 0
-        while it1 < len(right) and it2 < len(left):
+        n, m = len(right), len(left)
+        while it1 < n and it2 < m:
             if right[it1] < left[it2]:
                 result_arr.append(right[it1])
                 it1 += 1
             else:
                 result_arr.append(left[it2])
                 it2 += 1
-        if it1 == len(right) and it2 < len(left):
+        if it1 == n and it2 < m:
             result_arr.extend(left[it2:])
-        elif it2 == len(left) and it1 < len(right):
+        elif it2 == m and it1 < n:
             result_arr.extend(right[it1:])
         return result_arr
 
