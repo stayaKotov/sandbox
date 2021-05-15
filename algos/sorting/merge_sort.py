@@ -28,9 +28,7 @@ class MergeSort:
     def _wrapper(self, els):
         if len(els) > 1:
             left, right = self._split(els)
-            sorted_left = self._wrapper(left)
-            sorted_right = self._wrapper(right)
-            return self._merge(sorted_left, sorted_right)
+            return self._merge(self._wrapper(left), self._wrapper(right))
         else:
             return els
 
