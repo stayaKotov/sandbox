@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 
-if __name__ == "__main__":
+def lin_reg_test():
     lin_reg = LinearRegression(0.01, 900, 2)
     X = np.random.rand(1000, 2)
     y = X[:, 0] * 2 + X[:, 1] * 3
@@ -21,3 +21,7 @@ if __name__ == "__main__":
     plt.scatter(X[:,0], preds2, label="pred2")
     plt.legend()
     plt.show()
+
+
+if __name__ == "__main__":
+    lin_reg_test()
